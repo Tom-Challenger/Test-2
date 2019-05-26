@@ -1,0 +1,75 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 360px;
+	height: 180px;
+	
+	margin: 0 auto;
+
+	border: 1px solid black;
+
+	box-sizing: border-box;
+}
+
+.button {
+	display: block;
+}
+
+.button-ok {
+
+}
+
+.form__button {
+	margin: 5px 10px;
+}
+
+.answer__button.button-ok {
+    margin-left: auto;
+    padding: 10px 25px;
+
+    color: #ffffff;
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #1a73e8;
+}
+
+.description {
+	display: block;
+	padding: 5px 10px;
+}
+
+.calculation-form {
+	display: block;
+}
+
+.form__field {
+	display: block;
+	padding: 5px 10px;
+}
+
+.form__field label {
+	font-weight: bold;
+}
+
+.form__field input {
+	display: block;
+}
+
+/*Result*/
+.modal-answer {
+	padding: 20px 20px;
+}
+
+.answer__nema {
+
+}
+
+.answer__value {
+	
+}

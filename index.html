@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задание 2</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="app">
+		<div class="description">
+			<h2 class="description__title">{{ title }}</h2>
+			<p class="description__text">Создать страницу, содержащую скрипт, выводящий все возможные ходы шахматного коня из заданной позиции. В качестве входящего параметра необходимо принимать текущее положение фигуры.</p>
+		</div>
+
+		<div class="container">
+			<!-- Форма ввода -->
+			<form v-bind:class="classForm" v-show="showStatus.formIsShow" v-on:submit.prevent="okForm">
+				<div class="form__field">
+					<label for="starting-position">Исходное положение:</label>
+			 		<input id="starting-position" v-model="startingPosition" v-on:input="updateButtonStatus">
+		 		</div>
+			 	<button v-bind:disabled="isButtonDisabled" class="form__button button button_ok" type="submit" title="Ok">Ok</button>
+	 		</form>
+	 		
+	 		<!-- Вывод результата -->
+	 		<div v-bind:class="classAnswer" v-show="showStatus.answerIsShow">
+	 			<p class="answer__nema">Возможные варианты хода:</p>
+	 			<p class="answer__value">{{ possiblePositions }}</p>
+	 			<button class="answer__button button button-ok" type="button" title="Ok" v-on:click="okAnswer">Ok</button>
+	 		</div>
+ 		</div>
+	</div>
+
+	<!-- Подключаем vue.js -->
+	<!-- версия для разработки, отображает полезные предупреждения в консоли -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<!-- Подключаем основной файл проекта -->
+	<script src="main.js"></script>
+</body>
+</html>
